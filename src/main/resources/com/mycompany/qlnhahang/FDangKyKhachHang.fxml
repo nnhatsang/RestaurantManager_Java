@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.qlnhahang.FDangKyKhachHangController">
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="24.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách hàng" textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="406.0" layoutY="504.0" mnemonicParsing="false" onAction="#addKhachHangHandler" prefHeight="38.0" prefWidth="130.0" text="Đăng ký" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnThoat" layoutX="188.0" layoutY="504.0" mnemonicParsing="false" onAction="#btnThoat" prefHeight="38.0" prefWidth="130.0" text="Thoát">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Text fill="#000000a1" layoutX="24.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG KÝ TÀI KHOẢN" textAlignment="CENTER" wrappingWidth="660.13671875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+         <VBox layoutX="101.0" layoutY="111.0" prefHeight="421.0" prefWidth="152.0" spacing="20.0">
+            <children>
+            <Text id="lbl_TenKhachHang" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách hàng" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text id="lbl_SĐT" strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text id="lbl_CMND" strokeType="OUTSIDE" strokeWidth="0.0" text="Số CMND" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text id="lbl_GioiTinh" strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text id="lbl_DiaChi" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text id="lbl_TenTaiKhoan" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên tài khoản" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text id="lbl_MatKhau" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text id="lbl_XacNhanMatKhau" strokeType="OUTSIDE" strokeWidth="0.0" text="Xác nhận mật khẩu" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            </children>
+         </VBox>
+         <VBox layoutX="294.0" layoutY="111.0" prefHeight="400.0" prefWidth="300.0" spacing="13.0">
+            <children>
+            <TextField id="txt_TenKhachHang" fx:id="txtTenKH">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="txt_SĐT" fx:id="txtSDT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="txt_CMND" fx:id="txtCMND">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+               <ComboBox fx:id="cbGioiTinh" prefHeight="25.0" prefWidth="101.0" promptText="Giới Tính" />
+            <TextField id="txt_DiaChi" fx:id="txtDiaChi">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="txt_TenTaiKhoan" fx:id="txtUsername">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="txt_MatKhau" fx:id="txtPassword" promptText="Mật khẩu tối thiểu 6 ký tự">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="txt_XacNhanMatKhau" fx:id="txtXacNhanPass">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+               <CheckBox fx:id="ckbhienMatKhau" mnemonicParsing="false" text="Hiện mật khẩu" />
+            </children>
+         </VBox>
+   </children>
+</Pane>
+</AnchorPane>

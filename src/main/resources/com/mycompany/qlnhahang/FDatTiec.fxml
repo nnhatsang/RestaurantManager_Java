@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.qlnhahang.FDatTiecController">
+   <children>
+      <TabPane fx:id="tab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+      <Tab text="   Đặt tiệc   ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                        <Button id="btn_CapNhat" layoutX="14.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="31.0" prefWidth="101.0" text="Quay lại" textFill="RED">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <TextArea layoutX="470.0" layoutY="9.0" prefHeight="203.0" prefWidth="222.0" text="Thông tin sảnh cưới" />
+                  <VBox layoutX="112.0" layoutY="27.0" prefHeight="142.0" prefWidth="127.0" spacing="10.0">
+                     <children>
+                              <TextField id="txt_MaTiec" fx:id="txtMaTiec" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_MaKhachHang" fx:id="txtMaKH" editable="false" prefWidth="123.0" />
+                              <TextField id="txt_TenKhachHang" fx:id="txtTenKH" editable="false" prefWidth="123.0" />
+                              <TextField id="txt_NgayDat" fx:id="txtNgayDat" editable="false" prefWidth="123.0" />
+                        <DatePicker fx:id="dpNgayDat" editable="false" showWeekNumbers="true" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="12.0" layoutY="33.0" prefHeight="168.0" prefWidth="100.0" spacing="18.0">
+                     <children>
+                              <Text id="lbl_MaTiec" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã tiệc" />
+                        <Text id="lbl_MaKhachHang" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách hàng" />
+                              <Text id="lbl_MaKhachHang" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách hàng" />
+                              <Text id="lbl_NgayDat" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày đặt" />
+                        <Text id="lbl_NgayToChuc" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày tổ chức" wrappingWidth="73.16796875" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="562.0" layoutY="27.0" prefHeight="168.0" prefWidth="123.0" spacing="10.0">
+                     <children>
+                        <TextField id="txt_MaSanhCuoi" fx:id="txtMaSanh" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_TenSanhCuoi" fx:id="txtTenSanh" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_Tang" fx:id="txtTang" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_SucChua" fx:id="txtSucChua" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_GiaThue" fx:id="txtDonGiaSanh" editable="false" prefWidth="123.0" />
+                     </children>
+                  </VBox>
+                  <Text id="lbl_DanhSachSanhCuoi" layoutX="8.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sảnh cưới" />
+                  <TextField id="txt_DanhSachSanhCuoi" fx:id="txtTimKiemSanh" layoutX="124.0" layoutY="219.0" prefHeight="26.0" prefWidth="430.0" />
+                  <VBox layoutX="478.0" layoutY="33.0" prefHeight="174.0" prefWidth="84.0" spacing="18.0">
+                     <children>
+                        <Text id="lbl_MaSanhCuoi" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sảnh cưới" />
+                        <Text id="lbl_TenSanhCuoi" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sảnh cưới" />
+                        <Text id="lbl_Tang" strokeType="OUTSIDE" strokeWidth="0.0" text="Tầng" />
+                        <Text id="lbl_SucChua" strokeType="OUTSIDE" strokeWidth="0.0" text="Sức chứa" />
+                        <Text id="lbl_GiaThue" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá thuê" />
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tvSanh" layoutX="7.0" layoutY="245.0" prefHeight="232.0" prefWidth="686.0" />
+                        <VBox layoutX="247.0" layoutY="33.0" prefHeight="131.0" prefWidth="97.0" spacing="18.0">
+                           <children>
+                              <Text id="lbl_DatTenTiec" strokeType="OUTSIDE" strokeWidth="0.0" text="Đặt tên tiệc" wrappingWidth="61.083984375" />
+                              <Text id="lbl_TenSanhCuoi" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng khách" />
+                              <Text id="lbl_SoBan" strokeType="OUTSIDE" strokeWidth="0.0" text="Số bàn" />
+                        <Text id="lbl_Buoi" strokeType="OUTSIDE" strokeWidth="0.0" text="Buổi" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="345.0" layoutY="27.0" prefHeight="101.0" prefWidth="122.0" spacing="10.0">
+                           <children>
+                              <TextField id="txt_DatTenTiec" fx:id="txtTenTiec" prefWidth="123.0" />
+                              <TextField id="txt_SoBan" fx:id="txtSoLuongKhach" prefWidth="123.0" />
+                              <TextField id="txt_TenSanhCuoi" fx:id="txtSoBan" prefWidth="123.0" />
+                        <ComboBox fx:id="cbBuoi" prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                        <Button id="btn_Them" layoutX="592.0" layoutY="486.0" mnemonicParsing="false" onAction="#addDatTiecHandler" prefHeight="31.0" prefWidth="100.0" text="Đặt tiệc" textFill="#fc0000">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <RadioButton fx:id="rdSanh" layoutX="562.0" layoutY="223.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="127.0" text="Hiển thị sảnh trống" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab text=" Đặt dịch vụ ">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="448.0" prefWidth="700.0">
+               <children>
+                  <VBox layoutX="127.0" layoutY="2.0" prefHeight="189.0" prefWidth="127.0" spacing="21.0">
+                     <children>
+                        <TextField id="txt_TongSoDichVu" fx:id="txtTongSoDV" editable="false" prefWidth="123.0" text="0" />
+                        <TextField id="txt_ThanhTien" fx:id="txtThanhTienDV" editable="false" prefWidth="123.0" text="0" />
+                        <TextField id="txt_MaDichVuDaChon" fx:id="txtMaDV" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_GiaTien" fx:id="txtDonGiaDV" editable="false" prefWidth="123.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="5.0" layoutY="10.0" prefHeight="167.0" prefWidth="105.0" spacing="30.0">
+                     <children>
+                        <Text id="lbl_TongSoDichVu" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng số dịch vụ" />
+                        <Text id="lbl_ThanhTIen" strokeType="OUTSIDE" strokeWidth="0.0" text="Thành tiền" />
+                        <Text id="lbl_MaDichVuDaChon" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã dịch vụ đã chọn" />
+                        <Text id="lbl_GiaTien" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá tiền" />
+                     </children>
+                  </VBox>
+                  <Text id="lbl_DanhSachDichVu" layoutX="9.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách dịch vụ" />
+                  <Text id="lbl_DanhSachDaChon" layoutX="288.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách đã chọn" />
+                  <Button id="btn_Them" fx:id="btn_ThemDV" layoutX="179.0" layoutY="187.0" mnemonicParsing="false" onAction="#addDichVuHandler" prefWidth="75.0" text="Thêm" textFill="#fc0000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_Xoa" layoutX="615.0" layoutY="194.0" mnemonicParsing="false" onAction="#xoaDichVuHandler" prefWidth="75.0" text="Xóa" textFill="#fc0000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField id="txt_DanhSachDichVu" fx:id="txtTimKiemDV" layoutX="111.0" layoutY="235.0" prefHeight="26.0" prefWidth="578.0" />
+                  <TableView fx:id="tvDichVu" layoutX="7.0" layoutY="264.0" prefHeight="221.0" prefWidth="686.0" />
+                        <TableView fx:id="tvDichVuDat" layoutX="289.0" layoutY="30.0" prefHeight="159.0" prefWidth="401.0" />
+                        <Button id="btn_CapNhat" layoutX="6.0" layoutY="492.0" mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="31.0" prefWidth="101.0" text="Quay lại" textFill="RED">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text=" Đặt món ăn ">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="448.0" prefWidth="700.0">
+               <children>
+                  <VBox layoutX="122.0" layoutY="4.0" prefHeight="173.0" prefWidth="126.0" spacing="12.0">
+                     <children>
+                        <TextField id="txt_TongSoLuongMon" fx:id="txtTongSoMA" editable="false" prefWidth="123.0" text="0" />
+                        <TextField id="txt_ThanhTien" fx:id="txtThanhTienMA" editable="false" prefWidth="123.0" text="0" />
+                        <TextField id="txt_MaDichVuDaChon" fx:id="txtMaMA" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_SoLuong" fx:id="txtSoLuong" prefWidth="123.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="7.0" layoutY="10.0" prefHeight="169.0" prefWidth="115.0" spacing="20.0">
+                     <children>
+                        <Text id="lbl_TongSoLuongMon" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng số lượng món" />
+                        <Text id="lbl_ThanhTIen" strokeType="OUTSIDE" strokeWidth="0.0" text="Thành tiền" />
+                        <Text id="lbl_MaMonAnDaChon" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã món ăn đã chọn" />
+                        <Text id="lbl_SoLuong" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng" />
+                     </children>
+                  </VBox>
+                  <Text id="lbl_DanhSachMonAn" layoutX="7.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách món ăn" />
+                  <Text id="lbl_DanhSachDaChon" layoutX="288.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách đã chọn" />
+                  <TextField id="txt_DanhSachMonAn" fx:id="txtTimKiemMA" layoutX="111.0" layoutY="228.0" prefHeight="26.0" prefWidth="580.0" />
+                  <Button id="btn_Them" layoutX="33.0" layoutY="187.0" mnemonicParsing="false" onAction="#addMonAnHandler" prefWidth="75.0" text="Thêm" textFill="#fc0000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_CapNhat" layoutX="153.0" layoutY="187.0" mnemonicParsing="false" onAction="#updateMonAnHandler" prefWidth="100.0" text="Cập nhật" textFill="#fc0000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button id="btn_Xoa" layoutX="618.0" layoutY="187.0" mnemonicParsing="false" onAction="#xoaMonAnHandler" prefWidth="75.0" text="Xóa" textFill="#fc0000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tvThucAn" layoutX="7.0" layoutY="256.0" prefHeight="230.0" prefWidth="686.0" />
+                        <TableView fx:id="tvDatMonAn" layoutX="289.0" layoutY="30.0" prefHeight="135.0" prefWidth="409.0" />
+                        <Button id="btn_CapNhat" layoutX="5.0" layoutY="494.0" mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="31.0" prefWidth="101.0" text="Quay lại" textFill="RED">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+               </children>
+            </AnchorPane>
+         </content>
+    </Tab>
+      <Tab fx:id="tab4" text=" Thanh toán ">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="464.0" layoutY="139.0" prefHeight="108.0" prefWidth="122.0" spacing="12.0">
+                     <children>
+                        <TextField id="txt_NgayToChuc" fx:id="txtNgayDatTT" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_NgayDatTiec" fx:id="txtNgayToChuc" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_Buoi" fx:id="txtBuoi" editable="false" prefWidth="123.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="353.0" layoutY="142.0" prefHeight="98.0" prefWidth="99.0" spacing="20.0">
+                     <children>
+                        <Text id="lbl_NgayDatTiec" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày đặt tiệc" />
+                        <Text id="lbl_NgayToChuc" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày tổ chức" wrappingWidth="73.16796875" />
+                        <Text id="lbl_Buoi" strokeType="OUTSIDE" strokeWidth="0.0" text="Buổi" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="129.0" layoutY="141.0" prefHeight="99.0" prefWidth="124.0" spacing="12.0">
+                     <children>
+                        <TextField id="txt_MaSanhCuoi" fx:id="txtMaSanhTT" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_TenSanhCuoi" fx:id="txtSoLuongKhachTT" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_GiaThue" fx:id="txtSLBTT" editable="false" prefWidth="123.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="140.0" prefHeight="103.0" prefWidth="87.0" spacing="20.0">
+                     <children>
+                        <Text id="lbl_MaSanhCuoi" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sảnh cưới" />
+                        <Text id="lbl_TenSanhCuoi" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng khách" />
+                        <Text id="lbl_SoLuongBan" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng bàn" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="463.0" layoutY="30.0" prefHeight="80.0" prefWidth="123.0" spacing="12.0">
+                     <children>
+                        <TextField id="txt_Tang" fx:id="txtCMND" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_SĐT" fx:id="txtSDT" editable="false" prefWidth="123.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="351.0" layoutY="34.0" prefHeight="83.0" prefWidth="102.0" spacing="20.0">
+                     <children>
+                        <Text id="lbl_CMND" strokeType="OUTSIDE" strokeWidth="0.0" text="CMND" />
+                        <Text id="lbl_SĐT" strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="130.0" layoutY="30.0" prefHeight="67.0" prefWidth="124.0" spacing="12.0">
+                     <children>
+                        <TextField id="txt_MaKhachHang" fx:id="txtMaKHTT" editable="false" prefWidth="123.0" />
+                        <TextField id="txt_HoVaTen" fx:id="txtTenKHTT" editable="false" prefWidth="123.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="15.0" layoutY="34.0" prefHeight="78.0" prefWidth="116.0" spacing="20.0">
+                     <children>
+                        <Text id="lbl_MaKhachHang" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách hàng" />
+                        <Text id="lbl_HoVaTen" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên" />
+                     </children>
+                  </VBox>
+                  <Text id="lbl_DanhSachSanhCuoi" layoutX="15.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách dịch vụ" />
+                  <Button id="btn_XacNhan" layoutX="586.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnThanhToan" prefHeight="31.0" prefWidth="103.0" text="Xác nhận" textFill="RED">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Text id="lbl_DanhSachSanhCuoi" layoutX="365.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách món ăn" />
+                  <Text id="lbl_Buoi" layoutX="463.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền" />
+                  <TextField id="txt_TongTien" fx:id="txt_TongTien" editable="false" layoutX="552.0" layoutY="460.0" prefHeight="25.0" prefWidth="136.0" />
+                  <TableView fx:id="tvDatDV" layoutX="10.0" layoutY="295.0" prefHeight="157.0" prefWidth="331.0" />
+                  <TableView fx:id="tvDatMon" layoutX="359.0" layoutY="295.0" prefHeight="157.0" prefWidth="331.0" />
+                  <Text id="lbl_ThongTinSanhDaChon" layoutX="-9.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xác nhận thanh toán" textAlignment="CENTER" wrappingWidth="700.0000000000001">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                        <Button id="btn_CapNhat" layoutX="12.0" layoutY="493.0" mnemonicParsing="false" onAction="#btnQuayLai" prefHeight="31.0" prefWidth="101.0" text="Quay lại" textFill="RED">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
+   </children>
+</AnchorPane>
